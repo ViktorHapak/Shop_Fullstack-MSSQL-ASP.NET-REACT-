@@ -1,0 +1,114 @@
+.cart-container {
+    width: 80%;
+    margin: 30px auto 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: block;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.title-div {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title{
+    font-style: initial;
+    cursor: no-drop;
+}
+
+.cards-container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* ===== LOADING ===== */
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    width: 100%;
+}
+
+.loading-title {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.loading-title label{
+    color: lightgrey;
+    font-style: italic;
+    text-align: center;
+    color: lightgrey;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 30px;
+}
+
+.dot-first,
+.dot-second,
+.dot-third {
+    display: inline-block;
+    animation: dotJump 0.9s ease-in-out infinite;
+}
+
+.dot-first  { animation-delay: 0s; }
+.dot-second { animation-delay: 0.12s; }
+.dot-third  { animation-delay: 0.24s; }
+
+@keyframes dotJump {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+}
+
+.empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    color: lightgrey;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .title{
+        font-style: initial;
+        font-size: 20px;
+        cursor: no-drop;
+    }
+}

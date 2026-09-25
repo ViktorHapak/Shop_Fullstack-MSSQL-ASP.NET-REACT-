@@ -1,0 +1,100 @@
+.main-page {
+    width: 60%;
+    margin: 30px auto 0;
+    padding: 10px 10px 20px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.title-div {
+    width: 90%;
+    margin: 5px auto 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title {
+    font-style: initial;
+    cursor: default;
+}
+
+.others-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.others-table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #ccc;
+}
+
+.data-row:nth-child(odd) {
+    background-color: paleturquoise;
+}
+
+.data-row:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.key-cell{
+    width: 50%;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.value-cell {
+    width: 50%;
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.valute-cell:after{
+    content: " Ft";
+}
+
+.operations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.operations-container button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .key-cell{
+        font-size: 11px;
+    }
+
+    .value-cell {
+        padding: 3px;
+        font-size: 11px;
+    }
+
+}

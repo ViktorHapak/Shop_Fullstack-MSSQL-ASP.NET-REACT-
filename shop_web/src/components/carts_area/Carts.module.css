@@ -1,0 +1,706 @@
+.main-page {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+
+.options-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+
+.user-title,
+.product-title {
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.users-div {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.userform-container {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.user-title,
+.product-title {
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-searchbox {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 42px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: 0.1s ease-in-out;
+}
+
+.user-searchbox:hover {
+    border-color: #bdbdbd;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+.user-searchbox:focus-within {
+    border-color: #6aa9ff;
+    box-shadow:
+            0 0 0 2px rgba(80, 150, 255, 0.28),
+            0 3px 9px rgba(0, 0, 0, 0.16);
+}
+
+.user-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+    color: black;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex: 0 0 55px;
+    width: 55px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 13px;
+    background-color: blue;
+    border-radius: 0 9px 9px 0;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.15s ease-in-out;
+}
+
+.search-icon:hover {
+    color: #222;
+    background-color: #73c8f5;
+}
+
+
+.user-search-list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: calc(100% - 55px);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.user-searchbox.active:focus-within > .user-search-list {
+    display: flex;
+}
+
+.user-searchbox.active:hover > .user-search-list {
+    display: flex;
+}
+
+.user-searchbox.active:hover > .user-search-list > .user-search-ul {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.user-searchbox.active:focus-within > .user-search-list > .user-search-ul {
+    box-shadow: -2px 2px 5px rgba(80, 150, 255, 0.24);
+}
+
+.user-searchbox.active:focus-within {
+    border-radius: 10px 10px 10px 0;
+}
+
+.user-searchbox.active:hover {
+    border-radius: 10px 10px 10px 0;
+}
+
+.user-search-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    background-color: white;
+    border-color: #6aa9ff;
+    box-shadow: 0 5px 8px -3px rgba(80, 150, 255, 0.40);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+}
+
+.user-search-ul li {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: black;
+    background-color: #eeeeee;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.12s ease-in-out;
+}
+
+.user-search-ul li:nth-child(even) {
+    background-color: white;
+}
+
+.user-search-ul li:hover {
+    color: white;
+    background-color: #777777;
+}
+
+
+.products-div {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.productform-container {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.product-searchbox {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 42px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: visible;
+    transition: 0.1s ease-in-out;
+}
+
+.product-searchbox.active {
+    border-radius: 10px 10px 10px 0;
+}
+
+.product-searchbox:hover {
+    border-color: #bdbdbd;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+.product-searchbox:focus-within {
+    border-color: #6aa9ff;
+    box-shadow:
+            0 0 0 2px rgba(80, 150, 255, 0.28),
+            0 3px 9px rgba(0, 0, 0, 0.16);
+}
+
+.product-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+    color: black;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.product-search-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: calc(100% - 55px);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-searchbox.active:focus-within > .product-search-list {
+    display: flex;
+}
+
+.product-searchbox.active:hover > .product-search-list {
+    display: flex;
+}
+
+.product-searchbox.active:hover > .product-search-list > .product-search-ul {
+    box-shadow:
+            -1px 2px 4px rgba(80, 150, 255, 0.14),
+            1px 2px 4px rgba(80, 150, 255, 0.14),
+            0 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.product-searchbox.active:focus-within > .product-search-list > .product-search-ul {
+    box-shadow:
+            -2px 2px 5px rgba(80, 150, 255, 0.24),
+            2px 2px 5px rgba(80, 150, 255, 0.24),
+            0 5px 9px rgba(80, 150, 255, 0.20),
+            0 6px 10px rgba(0, 0, 0, 0.14);
+}
+
+.product-searchbox.active:focus-within {
+    border-radius: 10px 10px 10px 0;
+}
+
+.product-searchbox.active:hover {
+    border-radius: 10px 10px 10px 0;
+}
+
+.product-search-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    background-color: white;
+    border-color: #6aa9ff;
+    box-shadow: 0 5px 8px -3px rgba(80, 150, 255, 0.40);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+}
+
+.product-search-ul li {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: black;
+    background-color: #eeeeee;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.12s ease-in-out;
+}
+
+.product-search-ul li:nth-child(even) {
+    background-color: white;
+}
+
+.product-search-ul li:hover {
+    color: white;
+    background-color: #777777;
+}
+
+
+.found-products-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+    min-height: 24px;
+    margin: 5px 0 0 0;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+
+.found-product-div {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 35px;
+    max-width: 60%;
+    min-height: 22px;
+    margin: 0;
+    padding: 3px 15px 3px 6px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: default;
+    transition:
+            transform 0.12s ease-in-out,
+            box-shadow 0.12s ease-in-out;
+}
+
+
+.found-product-div:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+
+.found-product-label {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.1;
+    cursor: default;
+}
+
+
+.close-item {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 11px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 2px;
+    font-size: 5px;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+}
+
+.found-product-div:hover > .close-item {
+    opacity: 1;
+}
+
+
+.close-item:hover {
+    color: red;
+    background-color: white;
+    border-color: red;
+}
+
+
+.logic-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.operation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 28px;
+    margin: 10px 0 0 0;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.12s ease-in-out;
+}
+
+.operation-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.20);
+}
+
+
+hr {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    padding: 0;
+    background-color: #bcbcbc;
+    border: none;
+}
+
+.cart-operations-div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* ===== CARTS ===== */
+
+.carts-div {
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* ===== LOADING ===== */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    width: 100%;
+}
+
+.loading-title {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.loading-title label{
+    color: lightgrey;
+    font-style: italic;
+    text-align: center;
+    color: lightgrey;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 30px;
+}
+
+.dot-first,
+.dot-second,
+.dot-third {
+    display: inline-block;
+    animation: dotJump 0.9s ease-in-out infinite;
+}
+
+.dot-first  { animation-delay: 0s; }
+.dot-second { animation-delay: 0.12s; }
+.dot-third  { animation-delay: 0.24s; }
+
+@keyframes dotJump {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+}
+
+.empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    color: lightgrey;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+
+    .title{
+        font-style: initial;
+        font-size: 20px;
+        cursor: no-drop;
+    }
+
+    status-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: min(720px, 90%);
+        gap: 5px;
+        margin: 0;
+        padding: 5px 10px;
+        background-color: lightcyan;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .radio-div {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 3px 5px;
+        border-radius: 6px;
+        transition: 0.15s ease;
+    }
+
+    .radio-div:hover {
+        background-color: rgba(255, 255, 255, 0.70);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .radio-div label {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .radio-div input {
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        accent-color: #3977ee;
+        cursor: pointer;
+    }
+
+    .user-title,
+    .product-title {
+        font-size: 12px;
+    }
+
+    .users-div {
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .userform-container {
+        width: 100%;
+    }
+
+    .user-input {
+        padding: 0 11px;
+        font-size: 11px;
+    }
+
+    .user-searchbox {
+        min-height: 30px;
+    }
+
+    .products-div {
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .productform-container {
+        width: 100%;
+    }
+
+    .product-searchbox {
+        min-height: 30px;
+    }
+
+    .pages-select{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 3px;
+    }
+
+    .operation-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 30px;
+        height: 20px;
+        margin: 10px 0 0 0;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}

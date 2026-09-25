@@ -1,0 +1,161 @@
+.order-container {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: stretch;
+    border: 1px solid lightgrey;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 2;
+}
+
+.title-cell{
+    padding: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: lightskyblue;
+    border: 1px solid lightgrey;
+    color: black;
+
+}
+
+.value-cell {
+    padding: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    background-color: white;
+    border: 1px solid lightgrey;
+    color: black;
+    word-break: break-word;
+}
+
+.title-row,
+.user-row,
+.status-row,
+.created-row,
+.submitted-row,
+.price-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: nowrap;
+}
+
+.title-row {
+    width: 30%;
+}
+
+.user-row {
+    width: 70%;
+}
+
+.status-row,
+.created-row,
+.submitted-row,
+.price-row {
+    width: 100%;
+}
+
+.items-block {
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+
+.title-longcell {
+    padding: 5px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+
+.value-longblock {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+.item-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 3px;
+    border: none;
+    font-size: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+
+    .close-btn {
+        top: 5px;
+        left: 5px;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 1;
+        z-index: 2;
+    }
+
+    .title-cell{
+        padding: 3px;
+        font-size: 11px;
+
+    }
+
+    .value-cell {
+        padding: 3px;
+        font-size: 11px;
+    }
+
+    .title-longcell {
+        padding: 3px;
+        font-size: 11px;
+    }
+
+    .value-longblock {
+        gap: 1px;
+        font-size: 11px;
+    }
+}

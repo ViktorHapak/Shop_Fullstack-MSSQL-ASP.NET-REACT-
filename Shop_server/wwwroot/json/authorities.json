@@ -1,0 +1,15 @@
+{
+  "AddProduct": false,
+  "UpdateProduct": false,
+  "DeleteProduct": false,
+  "AddDepartment": false,
+  "DeleteDepartment": false,
+  "ReplenishStack": false,
+  "ReduceStack": true,
+  "ConfirmOrder": true,
+  "RejectOrder": true,
+  "CleanExpired": false,
+  "SetNewDay": true,
+  "ExportDatas": false,
+  "DeleteUser": false
+}

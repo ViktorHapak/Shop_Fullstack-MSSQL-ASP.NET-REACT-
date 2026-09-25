@@ -1,0 +1,96 @@
+.adminpanel-container {
+    width: 60%;
+    margin: 30px auto 0;
+    padding: 10px 10px 20px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.title-div {
+    width: 90%;
+    margin: 5px auto 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title {
+    font-style: initial;
+    cursor: default;
+}
+
+.authorities-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.authorities-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #ccc;
+}
+
+.authorities-row:nth-child(odd) {
+    background-color: paleturquoise;
+}
+
+.authorities-row:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.authorities-key {
+    width: 70%;
+    padding: 4px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 11px;
+    border: 1px solid #ccc;
+}
+
+.authorities-value {
+    width: 30%;
+    padding: 4px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.authorities-value input[type="checkbox"] {
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .title{
+        font-style: initial;
+        font-size: 20px;
+        cursor: initial;
+    }
+
+    .authorities-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    .authorities-key {
+        width: 70%;
+        padding: 4px;
+        font-size: 10px;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: bold;
+        border: 1px solid #ccc;
+    }
+
+    .authorities-value {
+        width: 30%;
+        padding: 4px;
+        font-size: 10px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+    }
+}
